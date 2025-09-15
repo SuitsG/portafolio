@@ -1,5 +1,12 @@
 // Configuración de partículas
 document.addEventListener('DOMContentLoaded', function () {
+    // Esperar a que todo esté cargado
+    setTimeout(() => {
+        initializePortfolio();
+    }, 100);
+});
+
+function initializePortfolio() {
     // Inicializar partículas
     if (window.particlesJS) {
         particlesJS('particles-js', {
@@ -106,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Cursor personalizado
+    // Cursor personalizado - Solo para dispositivos de escritorio
     const cursor = document.querySelector('.cursor');
     const cursorTrail = document.querySelector('.cursor-trail');
     let mouseX = 0;
@@ -114,38 +121,71 @@ document.addEventListener('DOMContentLoaded', function () {
     let trailX = 0;
     let trailY = 0;
 
-    document.addEventListener('mousemove', function (e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    // Verificar si es un dispositivo táctil
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top = mouseY + 'px';
-    });
+    if (!isTouchDevice && cursor && cursorTrail) {
+        // Solo activar el cursor personalizado en dispositivos de escritorio
+        document.addEventListener('mousemove', function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
 
-    function animateTrail() {
-        trailX += (mouseX - trailX) * 0.1;
-        trailY += (mouseY - trailY) * 0.1;
+            if (cursor) {
+                cursor.style.left = mouseX + 'px';
+                cursor.style.top = mouseY + 'px';
+                cursor.style.opacity = '1';
+            }
+        });
 
-        cursorTrail.style.left = trailX + 'px';
-        cursorTrail.style.top = trailY + 'px';
+        function animateTrail() {
+            if (cursorTrail) {
+                trailX += (mouseX - trailX) * 0.1;
+                trailY += (mouseY - trailY) * 0.1;
 
-        requestAnimationFrame(animateTrail);
+                cursorTrail.style.left = trailX + 'px';
+                cursorTrail.style.top = trailY + 'px';
+                cursorTrail.style.opacity = '1';
+            }
+
+            requestAnimationFrame(animateTrail);
+        }
+        animateTrail();
+
+        // Efecto de hover en elementos clicables
+        const clickables = document.querySelectorAll('a, button, .clickable');
+        clickables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                if (cursor) {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursor.style.borderColor = '#ff00ff';
+                }
+            });
+
+            el.addEventListener('mouseleave', () => {
+                if (cursor) {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.borderColor = '#00ffff';
+                }
+            });
+        });
+
+        // Ocultar cursor al salir de la ventana
+        document.addEventListener('mouseleave', function () {
+            if (cursor) cursor.style.opacity = '0';
+            if (cursorTrail) cursorTrail.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', function () {
+            if (cursor) cursor.style.opacity = '1';
+            if (cursorTrail) cursorTrail.style.opacity = '1';
+        });
+
+    } else {
+        // En dispositivos táctiles o si no existen los elementos, ocultar cursores
+        if (cursor) cursor.style.display = 'none';
+        if (cursorTrail) cursorTrail.style.display = 'none';
+        document.body.style.cursor = 'default';
     }
-    animateTrail();
-
-    // Efecto de hover en elementos clicables
-    const clickables = document.querySelectorAll('a, button, .clickable');
-    clickables.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'scale(1.5)';
-            cursor.style.borderColor = '#ff00ff';
-        });
-
-        el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'scale(1)';
-            cursor.style.borderColor = '#00ffff';
-        });
-    });
 
     // Navegación suave y activa
     const navLinks = document.querySelectorAll('.nav-link');
@@ -546,4 +586,4 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 Portfolio futurista cargado correctamente!');
     console.log('💫 Desarrollado por Yesid Casallas');
     console.log('🔗 GitHub: https://github.com/SuitsG');
-});
+}
