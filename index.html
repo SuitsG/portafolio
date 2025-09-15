@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesid Casallas - Portfolio Futurista</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Fondo de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;YC/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Acerca</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title glitch" data-text="YESID CASALLAS">YESID CASALLAS</h1>
+                </div>
+                <div class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    Backend Developer apasionado por crear soluciones digitales innovadoras.
+                    Especializado en desarrollo web, bases de datos y análisis de datos.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/SuitsG" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yesidcasallas/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dcsuitsc/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Suitcs" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hologram">
+                    <div class="hologram-content">
+                        <div class="code-lines">
+                            <span class="code-line">const developer = {</span>
+                            <span class="code-line"> name: 'Yesid Casallas',</span>
+                            <span class="code-line"> role: 'Backend Developer',</span>
+                            <span class="code-line"> location: 'Bogotá, Colombia',</span>
+                            <span class="code-line"> passion: 'Innovation'</span>
+                            <span class="code-line">};</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de mí -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Acerca de mí</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card glass">
+                        <h3>Mi Historia</h3>
+                        <p>
+                            Soy Yesid Casallas, un desarrollador Backend apasionado de Bogotá, Colombia.
+                            Como estudiante de ingeniería, combino el aprendizaje académico con la experiencia práctica
+                            para crear soluciones web innovadoras.
+                        </p>
+                        <p>
+                            Mi enfoque principal está en el desarrollo backend, bases de datos y análisis de datos,
+                            siempre buscando implementar las mejores prácticas y tecnologías emergentes.
+                        </p>
+                        <div class="stats">
+                            <div class="stat">
+                                <span class="stat-number">24+</span>
+                                <span class="stat-label">Repositorios</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Seguidores</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Años Codificando</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="profile-card glass">
+                        <div class="profile-avatar">
+                            <img src="https://avatars.githubusercontent.com/u/138601965?v=4" alt="Yesid Casallas">
+                            <div class="avatar-ring"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h4>Backend Developer</h4>
+                            <span class="location">📍 Bogotá, Colombia</span>
+                            <div class="badges">
+                                <span class="badge">Engineering Student</span>
+                                <span class="badge">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <h4>PHP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h4>Java</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML5</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Bases de Datos</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MySQL</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>MariaDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>MongoDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card glass" data-category="ecommerce backend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="E-Commerce Store">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/store" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Clothing E-Commerce</h3>
+                        <p>Tienda online en desarrollo donde aplico conocimientos en diseño web, bases de datos y
+                            desarrollo backend.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="backend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Banco HBC">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/bancoHBC" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Banco HBC</h3>
+                        <p>Sistema bancario desarrollado en PHP con funcionalidades completas de gestión bancaria.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Encriptador">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/Encriptador-de-Texto" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Encriptador de Texto</h3>
+                        <p>Aplicación web para encriptar y desencriptar texto usando algoritmos personalizados.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Juego Secreto">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/juego-secreto" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Juego Secreto</h3>
+                        <p>Implementación de lógica de juego desarrollado como parte del programa Alura.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Pizza Website">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/pagina-web-pizza" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Página Web Pizza</h3>
+                        <p>Sitio web para pizzería con diseño responsivo y interfaz atractiva.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Anime Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/SuitsG/Anime" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Anime Project</h3>
+                        <p>Proyecto relacionado con anime, explorando diferentes tecnologías y frameworks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card glass">
+                        <h3>¡Hablemos!</h3>
+                        <p>¿Tienes un proyecto en mente? ¿Buscas colaborar? ¡No dudes en contactarme!</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Ubicación</h4>
+                                    <p>Bogotá, Colombia</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/SuitsG" target="_blank">@SuitsG</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/yesidcasallas/" target="_blank">Yesid
+                                        Casallas</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/SuitsG" target="_blank" class="social-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yesidcasallas/" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dcsuitsc/" target="_blank" class="social-btn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Suitcs" target="_blank" class="social-btn">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form glass">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nombre</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Asunto</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Mensaje</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Yesid Casallas. Diseñado con ❤️ y mucha cafeína ☕</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Acerca</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
