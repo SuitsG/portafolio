@@ -1,15 +1,4 @@
-# No ignorar archivos importantes
-!index.html
-!styles.css
-!script.js
-!cursor-fix.js
-!vercel.json
-!README.md
-
-# Ignorar archivos de desarrollo
+README.md
 .git/
 node_modules/
-.env
-.env.local
-.DS_Store
-Thumbs.db
+*.log
