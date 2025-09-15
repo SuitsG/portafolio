@@ -28,7 +28,53 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- Fallback CSS crítico -->
+    <style>
+        /* CSS crítico en caso de fallo de carga */
+        body {
+            font-family: 'Rajdhani', Arial, sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a0a2e 25%, #16213e 50%, #0f3460 75%, #533a7d 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            color: #00ffff;
+            text-shadow: 0 0 20px #00ffff;
+            margin-bottom: 1rem;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -551,9 +597,26 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="cursor-fix.js"></script>
+    <script>
+        // Debug para verificar carga de recursos
+        console.log('🚀 Iniciando carga del portfolio...');
+        
+        // Verificar si CSS se cargó
+        setTimeout(() => {
+            const bodyStyles = window.getComputedStyle(document.body);
+            const bgColor = bodyStyles.backgroundColor;
+            console.log('Background color:', bgColor);
+            
+            if (bgColor === 'rgba(0, 0, 0, 0)' || bgColor === 'rgb(255, 255, 255)') {
+                console.error('❌ CSS no se cargó correctamente');
+            } else {
+                console.log('✅ CSS cargado correctamente');
+            }
+        }, 1000);
+    </script>
+    <script src="./cursor-fix.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
