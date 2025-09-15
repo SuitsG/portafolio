@@ -29,7 +29,7 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    
+
     <!-- Fallback CSS crítico -->
     <style>
         /* CSS crítico en caso de fallo de carga */
@@ -41,7 +41,7 @@
             padding: 0;
             min-height: 100vh;
         }
-        
+
         .nav {
             position: fixed;
             top: 0;
@@ -51,7 +51,7 @@
             padding: 1rem 0;
             z-index: 1000;
         }
-        
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -60,7 +60,7 @@
             text-align: center;
             padding: 2rem;
         }
-        
+
         .hero-title {
             font-family: 'Orbitron', monospace;
             font-size: 3rem;
@@ -68,7 +68,7 @@
             text-shadow: 0 0 20px #00ffff;
             margin-bottom: 1rem;
         }
-        
+
         .section {
             padding: 4rem 2rem;
             max-width: 1200px;
@@ -600,13 +600,13 @@
     <script>
         // Debug para verificar carga de recursos
         console.log('🚀 Iniciando carga del portfolio...');
-        
+
         // Verificar si CSS se cargó
         setTimeout(() => {
             const bodyStyles = window.getComputedStyle(document.body);
             const bgColor = bodyStyles.backgroundColor;
             console.log('Background color:', bgColor);
-            
+
             if (bgColor === 'rgba(0, 0, 0, 0)' || bgColor === 'rgb(255, 255, 255)') {
                 console.error('❌ CSS no se cargó correctamente');
             } else {
